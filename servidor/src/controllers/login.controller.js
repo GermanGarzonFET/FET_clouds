@@ -39,7 +39,7 @@ const iniciar = async(req, res) => {
 
     const { email, pass } = req.body;
 
-    const usuarioExiste = await UsuariosSchema.findOne({ email: email }).populate("rol");
+    const usuarioExiste = await UsuariosSchema.findOne({ email: email }).populate("roles");
     if (!usuarioExiste) {
         res.status(202).json({ message: "email no found" });
         return;
@@ -55,7 +55,10 @@ const iniciar = async(req, res) => {
         expiresIn: 86400 //24 horas
     });
 
-    res.json(token);
+    res.json(token); 
+
+
+
 
 
 };

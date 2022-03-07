@@ -22,7 +22,7 @@ export const chekUserExisted = async(req, res, next) => {
 
 
 export const chekRoleExisted = async(req, res, next) => {
-    const Roles = ["admin", "recolector"];
+    const Roles = ["admin", "usuario"];
     const rol = req.body.rol;
     console.log('entre al middleware de chekRoleExisted');
 

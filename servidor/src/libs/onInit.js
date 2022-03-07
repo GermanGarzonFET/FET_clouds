@@ -22,7 +22,7 @@ export const createRoles = async() => {
                 nombres:'admin',
                 apellidos:'admin',
                 email:'admin@correo',
-                pass:"admin@data",
+                pass:"admin",
                 roles:roles
             }).save()
         ]);

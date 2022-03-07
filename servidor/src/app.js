@@ -30,10 +30,11 @@ app.get('/', (req, res) => {
 
 import RolesRouter from './routes/roles.router';
 import UserRouter from './routes/usuarios.router'
-
+import LoginRouter from './routes/login.router';
 
 app.use('/api',RolesRouter);
 app.use('/api',UserRouter);
+app.use('/api',LoginRouter);
 
 app.use(express.static(path.join(__dirname, './controllers/public')));
 
